@@ -1,0 +1,104 @@
+module regfile_rv(
+    input         ck,
+    input         rt,
+    input         wr,
+    input  [4:0]  a1,
+    input  [4:0]  a2,
+    input  [4:0]  wa,
+    input  [31:0] wd,
+    output [31:0] q1,
+    output [31:0] q2
+);
+
+    reg [31:0] mem [0:31];
+    integer k;
+
+    always @(posedge ck) begin
+        if (rt) begin
+            for (k = 0; k < 32; k = k + 1)
+                mem[k] <= 32'b0;
+        end
+        else if (wr && (wa != 5'd0)) begin
+            mem[wa] <= wd;
+        end
+    end
+
+    assign q1 = (a1 == 5'd0) ? 32'b0 : mem[a1];
+    assign q2 = (a2 == 5'd0) ? 32'b0 : mem[a2];
+
+endmodule
+
+`timescale 1ns/1ps
+
+module tb_regfile_rv;
+
+    reg         ck, rt, wr;
+    reg  [4:0]  a1, a2, wa;
+    reg  [31:0] wd;
+    wire [31:0] q1, q2;
+
+    regfile_rv u0(ck, rt, wr, a1, a2, wa, wd, q1, q2);
+
+    initial ck = 0;
+    always #5 ck = ~ck;
+
+    initial begin
+        rt = 1; wr = 0; wa = 0; wd = 0; a1 = 0; a2 = 0;
+        @(posedge ck);
+        @(posedge ck);
+        #1 rt = 0;
+        a1 = 5'd4; a2 = 5'd15; #1;
+        if (q1 === 32'h0 && q2 === 32'h0) $display("PASS: reset");
+        else                              $display("FAIL: reset");
+
+        @(posedge ck); #1;
+        wa = 5'd3;  wd = 32'hABC12345; wr = 1;
+        @(posedge ck); #1;
+        wa = 5'd9;  wd = 32'h0F0F0F0F;
+        @(posedge ck); #1;
+        wa = 5'd30; wd = 32'hABC54321;
+        @(posedge ck); #1;
+        wr = 0;
+
+        a1 = 5'd3; a2 = 5'd9; #1;
+        if (q1 === 32'hABC12345 && q2 === 32'h0F0F0F0F)
+            $display("PASS: read x3 and x9");
+        else
+            $display("FAIL: read x3 and x9");
+
+        a1 = 5'd30; a2 = 5'd3; #1;
+        if (q1 === 32'hABC54321 && q2 === 32'hABC12345)
+            $display("PASS: read x30 and x3");
+        else
+            $display("FAIL: read x30 and x3");
+
+        @(posedge ck); #1;
+        wa = 5'd0; wd = 32'h87654321; wr = 1;
+        @(posedge ck); #1;
+        wr = 0;
+        a1 = 5'd0; #1;
+        if (q1 === 32'h0) $display("PASS: x0 is zero");
+        else              $display("FAIL: x0 is zero");
+
+        @(posedge ck); #1;
+        wa = 5'd12; wd = 32'h55555555; wr = 0;
+        @(posedge ck); #1;
+        a1 = 5'd12; #1;
+        if (q1 === 32'h0) $display("PASS: no write when wr=0");
+        else              $display("FAIL: no write when wr=0");
+
+        @(posedge ck); #1;
+        rt = 1;
+        @(posedge ck); #1;
+        rt = 0;
+        a1 = 5'd3; a2 = 5'd30; #1;
+        if (q1 === 32'h0 && q2 === 32'h0) $display("PASS: reset after writes");
+        else                              $display("FAIL: reset after writes");
+
+        @(posedge ck);
+        $finish;
+    end
+
+endmodule
+
+
