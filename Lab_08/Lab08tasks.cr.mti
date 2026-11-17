@@ -1,0 +1,12 @@
+D:/COAL_Lab/Lab_08/Lab08tasks.v {1 {vlog -work work -stats=none D:/COAL_Lab/Lab_08/Lab08tasks.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module pc_block
+-- Compiling module imem_rom
+-- Compiling module tb_pc_block
+-- Compiling module tb_register_file_4x4
+
+Top level modules:
+	tb_pc_block
+	tb_register_file_4x4
+
+} {} {}}

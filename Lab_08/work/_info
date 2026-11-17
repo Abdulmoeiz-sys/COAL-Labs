@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/
+vimem_rom
+Z0 !s110 1792481246
+!i10b 1
+!s100 PFUkfMkcU9S_ii26^me[N2
+I?NG@RYP]hYZ4@Kdm<POHA3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/COAL_Lab/Lab_08
+Z3 w1792481242
+Z4 8D:/COAL_Lab/Lab_08/Lab08tasks.v
+Z5 FD:/COAL_Lab/Lab_08/Lab08tasks.v
+L0 15
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1792481246.000000
+Z8 !s107 D:/COAL_Lab/Lab_08/Lab08tasks.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|D:/COAL_Lab/Lab_08/Lab08tasks.v|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vinstruction_memory
+Z12 !s110 1791879575
+!i10b 1
+!s100 4blRHX<^nNPYk?mC>Fl_E0
+I>dme`0ENKXPn7P2`OTJ;`1
+R1
+R2
+Z13 w1791879572
+R4
+R5
+L0 16
+R6
+r1
+!s85 0
+31
+Z14 !s108 1791879575.000000
+R8
+R9
+!i113 1
+R10
+R11
+vpc_block
+R0
+!i10b 1
+!s100 LHMEDQi;W`hF3:]5;@aFP3
+IEKNEM@G@aY4:HQZ2@FN9>1
+R1
+R2
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vprogram_counter
+R12
+!i10b 1
+!s100 QUoLCE`QRU:CJWfASiW@S1
+IVaf0z<OPzUDZGT[:?UHf`3
+R1
+R2
+R13
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R14
+R8
+R9
+!i113 1
+R10
+R11
+vtb_pc_block
+R0
+!i10b 1
+!s100 dmcZXPeO85;gJ2cbehIQ01
+IiBS`lZj1YJWTA<f`AWKTE1
+R1
+R2
+R3
+R4
+R5
+L0 45
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vtb_program_counter
+R12
+!i10b 1
+!s100 zc4lagaVRI;?7OGQ@m7@@2
+IQ`G1J@9gVGm62b<5Vglh`0
+R1
+R2
+R13
+R4
+R5
+L0 34
+R6
+r1
+!s85 0
+31
+R14
+R8
+R9
+!i113 1
+R10
+R11
+vtb_register_file_4x4
+R0
+!i10b 1
+!s100 i;HYJdcl9UD6`_bLmQoHZ1
+I0oO[O`f`CJRQGzcFJ`^@R0
+R1
+R2
+R3
+R4
+R5
+L0 78
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
