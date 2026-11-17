@@ -1,0 +1,241 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/
+valu
+Z0 !s110 1793897134
+!i10b 1
+!s100 6bV;PbO0if;=2Zc=a]_RM3
+I2H]=3;^NeigOTWeHe84U53
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/COAL_Lab/Lab_10
+Z3 w1793896987
+Z4 8D:/COAL_Lab/Lab_10/LabTasks.v
+Z5 FD:/COAL_Lab/Lab_10/LabTasks.v
+L0 80
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1793897133.000000
+Z8 !s107 D:/COAL_Lab/Lab_10/LabTasks.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|D:/COAL_Lab/Lab_10/LabTasks.v|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vbranch_comp
+R0
+!i10b 1
+!s100 ?4ERgY0SnF[HTjeXJUXLb1
+IZgE]9dVB^4<bzJcL^^U8b3
+R1
+R2
+R3
+R4
+R5
+L0 70
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vdatapath_tb
+R0
+!i10b 1
+!s100 J8d1ZCMXR6PSoIVnYE6LI0
+I9@8=JNgS7MF=97cUn`nn72
+R1
+R2
+R3
+R4
+R5
+L0 146
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vdatapath_top
+R0
+!i10b 1
+!s100 1^W[?<@]k8A6LJSMRi8XX2
+IdH;kTnRMBC0<m^P;PaB]T2
+R1
+R2
+R3
+R4
+R5
+L0 117
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vimem
+R0
+!i10b 1
+!s100 MYcUTUjhiPbiZUIgUI@KA2
+IP@^5O3;ln3M>RjcP=e_4P0
+R1
+R2
+R3
+R4
+R5
+L0 28
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vimm_gen
+R0
+!i10b 1
+!s100 A<ULFNbWmaIR204MMz]<j3
+IEBP<oXKDZekLFP?LklFS`3
+R1
+R2
+R3
+R4
+R5
+L0 54
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vmux2
+R0
+!i10b 1
+!s100 2:Ob1JlFnK:Yz3Q>Fc?^U2
+I7=L>A2MkF`LcN7iS^^T2f3
+R1
+R2
+R3
+R4
+R5
+L0 18
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vpc_adder
+R0
+!i10b 1
+!s100 SFARNG>JJ?9>F:Y_g@83d3
+IJkHccm1_0lnUPh:i`0<M;1
+R1
+R2
+R3
+R4
+R5
+L0 13
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vpc_reg
+R0
+!i10b 1
+!s100 0XG^k@aMjEm=D_7[bIQE:1
+I3nL@2^X?objM^0NhEHZF:2
+R1
+R2
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vregfile
+R0
+!i10b 1
+!s100 Zm4YV<]:Ua;N^a^VD^3>G2
+I[Bd@KA;HT4:c5:C20:0[U2
+R1
+R2
+R3
+R4
+R5
+L0 36
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vwb_mux
+R0
+!i10b 1
+!s100 Uh_i7=bPC4<8c:FF=IhTX0
+IJTm@2z`TR3KKFFWlUCP>b0
+R1
+R2
+R3
+R4
+R5
+L0 99
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

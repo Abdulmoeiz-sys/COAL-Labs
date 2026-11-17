@@ -1,0 +1,18 @@
+D:/COAL_Lab/Lab_10/LabTasks.v {1 {vlog -work work -stats=none D:/COAL_Lab/Lab_10/LabTasks.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module pc_reg
+-- Compiling module pc_adder
+-- Compiling module mux2
+-- Compiling module imem
+-- Compiling module regfile
+-- Compiling module imm_gen
+-- Compiling module branch_comp
+-- Compiling module alu
+-- Compiling module wb_mux
+-- Compiling module datapath_top
+-- Compiling module datapath_tb
+
+Top level modules:
+	datapath_tb
+
+} {} {}}
