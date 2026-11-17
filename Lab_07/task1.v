@@ -1,0 +1,99 @@
+module alu_1bit_dataflow (
+  input  wire a,
+  input  wire b,
+  input  wire [1:0] alu_op,
+  input  wire carry_in,
+  input  wire b_inv,
+  output wire result,
+  output wire carry_out
+);
+
+  wire and_result;
+  assign and_result = a & b;
+ 
+  wire or_result;
+  assign or_result = a | b;
+
+  wire b_complement;
+  assign b_complement = b ^ b_inv;
+  // If b_inv=0: b_complement = b XOR 0 = b 
+  // If b_inv=1: b_complement = b XOR 1 = NOT b
+  
+  
+  // Full Adder computes:
+  //   sum = a XOR b XOR carry_in
+  //   carry_out = (a AND b) OR (carry_in AND (a XOR b))
+  
+  wire adder_result;
+  assign adder_result = a ^ b_complement ^ carry_in;
+ 
+  wire carry_part1, carry_part2;
+  assign carry_part1 = a & b_complement;
+  // Generate carry if both inputs are 1
+  
+  assign carry_part2 = carry_in & (a ^ b_complement);
+  // Propagate carry if inputs differ and we have incoming carry
+  
+  wire adder_carry;
+  assign adder_carry = carry_part1 | carry_part2;
+  // Final carry is OR of both parts
+  
+ 
+  assign result = (alu_op == 2'b00) ? and_result :
+                  (alu_op == 2'b01) ? or_result :
+                  adder_result;
+
+  //  alu_op=00, AND result
+  //  alu_op=01, OR result
+  // Otherwise , ADDER/SUB result
+  
+  // Carry output (only meaningful for ADD/SUB)
+  assign carry_out = adder_carry;
+
+endmodule
+
+
+
+
+module test_dataflow;
+  reg a_test, b_test, carry_in_test, b_inv_test;
+  reg [1:0] alu_op_test;
+  wire result_test, carry_out_test;
+  
+  alu_1bit_dataflow dut (
+    .a(a_test),
+    .b(b_test),
+    .alu_op(alu_op_test),
+    .carry_in(carry_in_test),
+    .b_inv(b_inv_test),
+    .result(result_test),
+    .carry_out(carry_out_test)
+  );
+  
+  initial begin
+    // Test 1: AND
+    a_test = 1; b_test = 1; alu_op_test = 2'b00; carry_in_test = 0; b_inv_test = 0;
+    #10;
+   
+    // Test 2: OR
+    a_test = 1; b_test = 0; alu_op_test = 2'b01; carry_in_test = 0; b_inv_test = 0;
+    #10;
+    
+    // Test 3: ADD (1+1)
+    a_test = 1; b_test = 1; alu_op_test = 2'b10; carry_in_test = 0; b_inv_test = 0;
+    #10;
+    
+    // Test 4: ADD with carry (1+1+1)
+    a_test = 1; b_test = 1; alu_op_test = 2'b10; carry_in_test = 1; b_inv_test = 0;
+    #10;
+    
+    // Test 5: SUB (1-1 using 2's complement)
+    a_test = 1; b_test = 1; alu_op_test = 2'b10; carry_in_test = 1; b_inv_test = 1;
+    #10;
+
+    // Test 6: ADD (0+1)
+    a_test = 0; b_test = 1; alu_op_test = 2'b10; carry_in_test = 0; b_inv_test = 0;
+    #10;
+    
+  end
+endmodule

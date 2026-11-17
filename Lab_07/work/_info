@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/
+valu_1bit_behavioral
+Z0 !s110 1791275611
+!i10b 1
+!s100 8WLAmQ5Cjzi8J@W]I?T0g3
+I4=m@C;`az:PZ^h=_4DRhZ2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/COAL_Lab/Lab_07
+Z3 w1791275604
+Z4 8D:/COAL_Lab/Lab_07/task1.v
+Z5 FD:/COAL_Lab/Lab_07/task1.v
+L0 1
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1791275611.000000
+Z8 !s107 D:/COAL_Lab/Lab_07/task1.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|D:/COAL_Lab/Lab_07/task1.v|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+valu_1bit_dataflow
+Z12 !s110 1791276458
+!i10b 1
+!s100 j@NgE3T1MZbDRbl`LomKn0
+I3UTPE5M=hC008OWh?6S^41
+R1
+R2
+Z13 w1791276454
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+Z14 !s108 1791276458.000000
+R8
+R9
+!i113 1
+R10
+R11
+vtest_behavioral
+R0
+!i10b 1
+!s100 G:8O[>n?V8?AO^V1g1CNU2
+ImCch=PoC<iNMMd04O2dS91
+R1
+R2
+R3
+R4
+R5
+L0 53
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vtest_dataflow
+R12
+!i10b 1
+!s100 oA7KHZUS3fP[BiX977c0A1
+IU_FIzUdQb;@7TF3a5oF@90
+R1
+R2
+R13
+R4
+R5
+L0 58
+R6
+r1
+!s85 0
+31
+R14
+R8
+R9
+!i113 1
+R10
+R11
